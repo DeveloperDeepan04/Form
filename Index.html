@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        html{
+            background-color: black;
+            color: white;
+        }
+        *::selection{
+            background-color: white;
+            color: black;
+        }
+        legend{
+            font-weight: bolder;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post" autocomplete="off">
+        <fieldset>
+            <legend>Profile:</legend><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" value="Spider" required><br><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" value="Man" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="spiderman@gmail.com" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="pass" name="pass" minlength="8" required><br><br>
+        <label for="dob">DOB:</label>
+        <input type="date" name="date" id="date" required><br><br>
+        <label for="pimage">Pofile Image:</label>
+        <input type="file" name="pimage" id="pimage" accept=".jpg,.jpeg,.png,.ico"><br><br>
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+            <option value="select" selected disabled>Select</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+        </select><br><br>
+        <input type="checkbox" name="agree" id="agree" required>
+        <label for="agree">Yes,I Agree with the policy.</label><br><br>
+        <label for="comment">Comment:</label><br>
+        <textarea name="comment" id="comment" cols="30" rows="5"></textarea><br><br>
+        <label for="sname">Name:</label>
+        <input list="sname" required>
+        <datalist id="sname">
+            <option value="Tom Holland">
+            <option value="Andrew Garfield">
+            <option value="Tobey Maguire">
+        </datalist><br><br>&nbsp;&nbsp;
+        <button type="button" id="score" onclick="document.location=('Score.html')">Set Score</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
